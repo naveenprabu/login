@@ -17,14 +17,16 @@
 	
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login100">
+			<div class="wrap-login100" id="foo">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/logo.png" alt="IMG">
 					
 				</div>
 				
-
-				<form class="login100-form validate-form">
+				
+				<form class="login100-form validate-form" id="foo">
+					<div class="kumar">
+						<div class="nsv">
 					<span class="login100-form-title">
 						Login
 					</span>
@@ -59,16 +61,19 @@
 						<a class="txt2" href="#">
 							Username / Password?
 						</a>
-						<br>
+						<br><br>
 					</div>
-
-				
+				</div>
+				<div class="overlay">
+						<div class="text">Hello World</div>
+					  </div>
+					</div>
 				</form>
+			
 				
-
 			</div>
 						<div class="container-login100-form-btn" id="top" >
-					<button class="login100-form-btn" id="red" >
+					<button class="login100-form-btn" id="red" href="" >
 							Create your Account
 									<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 					</button>
@@ -88,10 +93,18 @@
 	<script src="vendor/select2/select2.min.js"></script>
 
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 	<script >
 		$('.js-tilt').tilt({
-			scale: 1.1
+			scale: 1.1;
 		})
+
+		$(document).ready(function(){
+ 			 $("#top").click(function(){
+    				$("#foo").fadeToggle();
+  });
+});
 	</script>
 
 	<script src="js/main.js"></script>
